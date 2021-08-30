@@ -1,12 +1,13 @@
 const sql = require("/home/kimaru/Desktop/nodejs-express-mysql/models/db.js");
 
-// constructor
+// Customer constructor
 const Customer = function (customer) {
   this.email = customer.email;
   this.name = customer.name;
   this.active = customer.active;
 };
 
+//Create
 Customer.create = (newCustomer, result) => {
   sql.query("INSERT INTO customers SET ?", newCustomer, (err, res) => {
     if (err) {
@@ -20,6 +21,7 @@ Customer.create = (newCustomer, result) => {
   });
 };
 
+//Find using ID
 Customer.findById = (customerId, result) => {
   sql.query(`SELECT * FROM customers WHERE id = ${customerId}`, (err, res) => {
     if (err) {
@@ -39,6 +41,7 @@ Customer.findById = (customerId, result) => {
   });
 };
 
+//Select all Customers
 Customer.getAll = (result) => {
   sql.query("SELECT * FROM customers", (err, res) => {
     if (err) {
@@ -52,6 +55,7 @@ Customer.getAll = (result) => {
   });
 };
 
+//Update Customers list by ID
 Customer.updateById = (id, customer, result) => {
   sql.query(
     "UPDATE customers SET email = ?, name = ?, active = ? WHERE id = ?",
@@ -75,6 +79,7 @@ Customer.updateById = (id, customer, result) => {
   );
 };
 
+//Delete a specific Customer
 Customer.remove = (id, result) => {
   sql.query("DELETE FROM customers WHERE id = ?", id, (err, res) => {
     if (err) {
@@ -94,6 +99,7 @@ Customer.remove = (id, result) => {
   });
 };
 
+//Delete all Customers
 Customer.removeAll = (result) => {
   sql.query("DELETE FROM customers", (err, res) => {
     if (err) {

@@ -3,7 +3,7 @@
 //Install modules >> npm install express mysql body-parser --save
 
 const express = require("express"); //Import Express
-const bodyParser = require("body-parser"); //body-parser is depriciated, should use cookie-parser instead
+const bodyParser = require("body-parser"); //body-parser is depriciated, could use cookie-parser instead??
 
 const app = express();
 
@@ -13,7 +13,10 @@ app.use(bodyParser.urlencoded({ extended: true })); //parse requests of content-
 
 //Route
 app.get("/", (req, res) => {
-  res.json({ message: "Simple CRUD app using Express..." });
+  res.json({
+    message:
+      "Simple CRUD app using Express, a Node.js web application framework ...",
+  });
 });
 
 require("/home/kimaru/Desktop/nodejs-express-mysql/routes/customer.routes.js")(
@@ -21,5 +24,5 @@ require("/home/kimaru/Desktop/nodejs-express-mysql/routes/customer.routes.js")(
 );
 //Port, listening for requests
 app.listen(3000, () => {
-  console.log("Server is running at port 3000...");
+  console.log("Server is running at port 3000(http://localhost:3000)...");
 });
