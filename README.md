@@ -10,7 +10,7 @@ an exported database in your project directory for testing.
 
 
 <h3></h3>
-<li>The exported DB is in the main branch saved as "nodebdDAP.sql" </li>
+<li>The exported DB is in the main branch saved as "nodedbDAP.sql" </li>
 <li>Used Postman to test functionality of the API using HTTP requests </li>
 <li>Steps to come up with the CRUD application were: 
   <ol>Creating a Node.js application </ol>
