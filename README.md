@@ -1,8 +1,6 @@
-<h1> Digital Apprentice Program </h1>
 <h2> Software Development(Mobile, Web & Desktop) challenge </h2>
 
-<h4>Question Selected:</h4>
-b) Build a simple CRUD application using ExpressJS and MYSQL.
+Build a simple CRUD application using ExpressJS and MYSQL.
 Submit your solution by sending us a link to your github repo. Include
 an exported database in your project directory for testing.
 
