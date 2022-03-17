@@ -1,7 +1,7 @@
-<h2> Software Development(Mobile, Web & Desktop) challenge </h2>
+<h2> 
+Build a simple CRUD application using ExpressJS and MYSQL.</h2>
 
-Build a simple CRUD application using ExpressJS and MYSQL.
-Includes an exported database in your project directory for testing.
+Includes an exported database in project directory for testing.
 
 
 
